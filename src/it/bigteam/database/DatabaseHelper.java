@@ -9,12 +9,13 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.content.Context;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 	
 	private static final String DATABASE_NAME = "uffici.db";
-	private static final String DATABASE_PATH = "/data/data/it.bigteam.amministrapa/databases/";
+	private static final String DATABASE_PATH = "/data/data/it.bigteam/databases/";
 	private static final int DATABASE_VERSION = 1;
 	private SQLiteDatabase myDataBase;
 	private final Context context;
@@ -64,8 +65,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		try{
 				String myPath = DATABASE_PATH + DATABASE_NAME;
 				checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
+				System.out.println("DB TROVATOOOOOOOOOOOOOOO!!!!!!!!!!");
 		}catch(SQLiteException e){
 	//database does't exist yet.
+			System.out.println("DB NON TROVATOOOOOOOOOOOOOOO!!!!!!!!!!");
 		}
 		if(checkDB != null){ 
 			checkDB.close();
