@@ -5,6 +5,7 @@ import it.bigteam.database.UfficioDataSource;
 import it.bigteam.loader.SQLiteUfficioDataLoader;
 import it.bigteam.model.Ufficio;
 
+import java.io.IOException;
 import java.util.List;
 
 import android.annotation.TargetApi;
@@ -59,8 +60,8 @@ public class CustomLoaderListFragment extends ListFragment implements LoaderCall
 	public void onLoadFinished(android.support.v4.content.Loader<List<Ufficio>> loader, List<Ufficio> data) {
 		 if (DEBUG) Log.i(TAG, "+++ onLoadFinished() called! +++");
 	     mAdapter.clear(); 
-		 for(Ufficio Ufficio : data){
-			 mAdapter.add(Ufficio);
+		 for(Ufficio ufficio : data){
+			 mAdapter.add(ufficio);
 		 }
 	     if (isResumed()) {
 	       setListShown(true);

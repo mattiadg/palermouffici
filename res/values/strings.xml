@@ -4,5 +4,16 @@
     <string name="app_name">AmministraPa</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="detail_name">UfficioDetailActivity</string>
+    <string name="area_textView">Area</string>
+    <string name="settore_textView">Settore</string>
+    <string name="email_set_textView">Email Settore</string>
+    <string name="email_cert_set_textView">PEC Settore</string>
+    <string name="servizio_textView">Servizio</string>
+    <string name="indirizzo_textView">Indirizzo</string>
+    <string name="telefono_textView">Telefono</string>
+    <string name="fax_textView">Fax</string>
+    <string name="email_ser_textView">Email Servizio</string>
+    <string name="email_cert_ser_textView">PEC Servizio</string>
 
 </resources>

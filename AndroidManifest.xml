@@ -22,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:launchMode="standard" android:label="@string/detail_name" android:name="it.bigteam.UfficioDetailActivity"></activity>
     </application>
 
 </manifest>
